@@ -34,5 +34,18 @@ Item {
 
         }
 
+        TerminalTextArea {
+
+        }
+
+        Text {
+            font.family: "Monserrat"
+            font.pixelSize: 10
+            color: "#ECD078"
+            x: 10
+            y: parent.height - 20
+            text: "Velocidad / Puerto - Estado"
+        }
+
     }
 }
