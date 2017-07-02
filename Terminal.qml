@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.7
 
 
 Item {
@@ -17,6 +17,19 @@ Item {
             color: "#D95B43"
             x: 16; y: 12;
             text: "CONEXIÓN"
+        }
+        Rectangle {
+            id: iconoConectado
+            x: 12; y: 36;
+            width: 22
+            height: 22
+            color: "#53777A"
+            Image {
+                source: "qrc:/iconos/iconos/usb_ok.svg"
+                anchors.centerIn: parent
+                sourceSize.height: 11
+                sourceSize.width: 11
+            }
         }
     }
 
