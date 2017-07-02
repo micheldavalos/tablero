@@ -18,15 +18,19 @@ Item {
             x: 16; y: 12;
             text: "CONEXIÓN"
         }
-        Text {
-            font.family: "Montserrat"
-            font.pixelSize: 10
-            color: "#ECD078"
-            x: 16; y: 12;
-            text: "BaudeRate"
-        }
 
         OpcionesConexion {
+
+            Text {
+                font.family: "Montserrat"
+                font.pixelSize: 10
+                color: "#ECD078"
+                x: 136; y: 44;
+                text: "BaudeRate"
+            }
+        }
+
+        TerminalLineEdit {
 
         }
 
