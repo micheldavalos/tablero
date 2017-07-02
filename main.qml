@@ -7,10 +7,14 @@ Window {
     height: 480
     title: qsTr("Hello World")
 
-    MainForm {
+    Terminal {
         anchors.fill: parent
-        mouseArea.onClicked: {
-            console.log(qsTr('Clicked on background. Text: "' + textEdit.text + '"'))
-        }
     }
+
+//    MainForm {
+//        anchors.fill: parent
+//        mouseArea.onClicked: {
+//            console.log(qsTr('Clicked on background. Text: "' + textEdit.text + '"'))
+//        }
+//    }
 }
