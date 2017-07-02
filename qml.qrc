@@ -11,5 +11,8 @@
         <file>iconos/usb_no_ok.svg</file>
         <file>iconos/baudrate.svg</file>
         <file>iconos/serialport.svg</file>
+        <file>iconos/send.svg</file>
+        <file>iconos/pointer_down_0.svg</file>
+        <file>iconos/pointer_up_0.svg</file>
     </qresource>
 </RCC>
