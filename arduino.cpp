@@ -2,7 +2,7 @@
 
 Arduino::Arduino()
 {
-//    disponibles();
+    disponibles();
     serial = nullptr;
 }
 
@@ -89,9 +89,24 @@ void Arduino::lectura()
     }
 }
 
-QHash<size_t, QSerialPortInfo> Arduino::getSerial_disponibles() const
+QHash<size_t, QSerialPortInfo> Arduino::_getSerial_disponibles() const
 {
     return serial_disponibles;
+}
+
+QList<QString> Arduino::getSerial_disponibles() const
+{
+    QList<QString> l;
+    QHashIterator<size_t, QSerialPortInfo> i(serial_disponibles);
+     while (i.hasNext()) {
+         i.next();
+         l.append(i.value().portName());
+     }
+
+//     qDebug() << serial_disponibles.size();
+     return l;
+
+
 }
 
 void Arduino::setSerial_disponibles(const QHash<size_t, QSerialPortInfo> &value)

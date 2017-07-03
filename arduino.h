@@ -5,8 +5,10 @@
 #include <QSerialPort>
 #include <QSerialPortInfo>
 #include <QHash>
+#include <QList>
 #include <QTextStream>
 #include <QDebug>
+
 
 class Arduino : public QObject
 {
@@ -28,7 +30,8 @@ public:
     qint32 getBaudRate() const;
     void setBaudRate(const qint32 &value);
 
-    QHash<size_t, QSerialPortInfo> getSerial_disponibles() const;
+    QHash<size_t, QSerialPortInfo> _getSerial_disponibles() const;
+    Q_INVOKABLE QList<QString> getSerial_disponibles() const;
     void setSerial_disponibles(const QHash<size_t, QSerialPortInfo> &value);
 
 signals:

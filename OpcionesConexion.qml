@@ -1,5 +1,6 @@
 import QtQuick 2.0
 
+
 Item {
     Rectangle {
         property int estado: 0
@@ -147,7 +148,7 @@ Item {
             }
             onPressed: {
                 iconoSerialport.colorBackgraound = "#D95B43"
-
+                console.log(arduino.getSerial_disponibles())
             }
 
         }

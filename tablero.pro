@@ -1,10 +1,11 @@
 TEMPLATE = app
 
-QT += qml quick xml svg
+QT += qml quick xml svg serialport
 QTPLUGIN += qsvg
 CONFIG += c++11
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    arduino.cpp
 
 RESOURCES += qml.qrc
 
@@ -31,3 +32,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES +=
+
+HEADERS += \
+    arduino.h
