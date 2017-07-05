@@ -39,6 +39,26 @@ bool Arduino::conectar(QSerialPortInfo &port)
     }
 }
 
+bool Arduino::conectar(QString puerto, int baudrate)
+{
+    baudRate = baudrate;
+
+    QHashIterator<size_t, QSerialPortInfo> i(serial_disponibles);
+    while (i.hasNext()) {
+        i.next();
+        if (i.value().portName() == puerto)
+         {
+             QSerialPortInfo s = i.value();
+             return conectar(s);
+//             return true;
+
+         }
+
+     }
+     return false;
+
+}
+
 qint32 Arduino::getBaudRate() const
 {
     return baudRate;
@@ -81,11 +101,11 @@ void Arduino::lectura()
         char *data = new char[bytes];
         serial->read(data, bytes);
         QByteArray data_(data, bytes);
-        //    QString texto(data);
+            QString texto(data);
         //    QTextStream cout(stdout);
 
         //    cout << "Respuesta: " << texto << endl;
-        emit datos(data_);
+        emit datos(texto);
     }
 }
 
@@ -108,6 +128,8 @@ QList<QString> Arduino::getSerial_disponibles() const
 
 
 }
+
+
 
 QList<qint32> Arduino::bautRates() const
 {

@@ -35,6 +35,10 @@ Item {
             onPressed: {
                 iconoConectado.colorBackgraound = "#D95B43"
 
+                if(arduino.name != "") {
+                    console.log(arduino.conectar(arduino.name, arduino.baud))
+                }
+
             }
 
         }

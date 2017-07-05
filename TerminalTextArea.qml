@@ -14,6 +14,10 @@ Item {
         textColor: "#53777A"
         horizontalAlignment: TextEdit.AlignLeft
 
+        Connections {
+            target: arduino
+            onDatos: textArea.append(datos)
+        }
         style: TextAreaStyle {
 
             scrollBarBackground: Rectangle {

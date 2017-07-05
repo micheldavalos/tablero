@@ -33,10 +33,11 @@ public:
     QHash<size_t, QSerialPortInfo> _getSerial_disponibles() const;
     Q_INVOKABLE QList<QString> getSerial_disponibles() const;
     Q_INVOKABLE QList<int> bautRates() const;
+    Q_INVOKABLE bool conectar(QString puerto, int baudrate);
     void setSerial_disponibles(const QHash<size_t, QSerialPortInfo> &value);
 
 signals:
-    void datos(QByteArray);
+    void datos(QString datos);
 
 public slots:
     void lectura();
