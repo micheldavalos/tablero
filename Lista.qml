@@ -2,7 +2,7 @@ import QtQuick 2.0
 Item {
     id: info
     height: vista.contentItem.childrenRect.height
-    width: 72
+    width: vista.contentItem.childrenRect.width + 4
     property alias listaPuerto: puertosModel
 
     signal agregarPuerto(string puerto)
@@ -43,6 +43,8 @@ Item {
                     onClicked: {
                         console.log(namePort)
                         arduino.name = namePort
+
+                        listaPuertos.visible = false
 
                     }
 
