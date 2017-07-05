@@ -21,7 +21,7 @@ bool Arduino::conectar(QSerialPortInfo &port)
     {
         serial = new QSerialPort(port);
         serial->setBaudRate(baudRate);
-        qDebug() << serial->portName() << serial->baudRate() << baudRate;
+//        qDebug() << serial->portName() << serial->baudRate() << baudRate;
         bool conexion = serial->open(QIODevice::ReadWrite);
         if(conexion)
         {
@@ -163,7 +163,7 @@ void Arduino::disponibles()
         if( l.portName().contains(QRegExp("^ttyACM.$")))
 #endif
             {
-                qDebug() << l.portName() << endl;
+//                qDebug() << l.portName() << endl;
                 serial_disponibles[index++] = l;
             }
     }

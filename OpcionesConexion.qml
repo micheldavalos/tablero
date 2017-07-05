@@ -131,7 +131,7 @@ Item {
                 iconoBaudrate.colorBackgraound = "#D95B43"
                 listaBautRates.visible = !listaBautRates.visible
                 listaBautRates.listaPuerto.clear()
-                console.log("baud: ", arduino.baud)
+//                console.log("baud: ", arduino.baud)
                 var lista_baud = arduino.bautRates()
                 for(var p in lista_baud) {
 //                    console.log(lista_baud[p])
@@ -185,7 +185,7 @@ Item {
                 iconoSerialport.colorBackgraound = "#D95B43"
                 listaPuertos.visible = !listaPuertos.visible
                 listaPuertos.listaPuerto.clear()
-                console.log("nombre: ", arduino.name)
+//                console.log("nombre: ", arduino.name)
                 var lista_puertos = arduino.getSerial_disponibles()
                 for(var p in lista_puertos) {
 //                    console.log(lista_puertos[p])

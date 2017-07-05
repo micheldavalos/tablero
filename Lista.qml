@@ -43,7 +43,7 @@ Item {
                     anchors.fill: parent
 
                     onClicked: {
-                        console.log(namePort)
+//                        console.log(namePort)
 
                         if(listaBautRates.visible == true)
                         {
