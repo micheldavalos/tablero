@@ -7,6 +7,7 @@ Item {
     Arduino{
         id: arduino
         property string name: ""
+        property string baud: ""
     }
     Rectangle {
         color: "#542437"

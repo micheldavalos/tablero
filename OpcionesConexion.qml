@@ -93,6 +93,13 @@ Item {
             sourceSize.width: 14
         }
 
+        Lista {
+            id: listaBautRates
+            x: 10; y: -8; z: 1
+            width: 72
+            visible: false
+        }
+
         MouseArea {
             anchors.fill: parent
             hoverEnabled: true
@@ -109,7 +116,16 @@ Item {
                 }
             }
             onPressed: {
+                iconoSerialport.z = -1
                 iconoBaudrate.colorBackgraound = "#D95B43"
+                listaBautRates.visible = !listaBautRates.visible
+                listaBautRates.listaPuerto.clear()
+                console.log("baud: ", arduino.baud)
+                var lista_baud = arduino.bautRates()
+                for(var p in lista_baud) {
+//                    console.log(lista_baud[p])
+                    listaBautRates.agregarPuerto(lista_baud[p])
+                }
 
             }
 
@@ -134,6 +150,7 @@ Item {
         Lista {
             id: listaPuertos
             x: 10; y: -8;
+            width: 72
             visible: false
         }
 
@@ -153,6 +170,7 @@ Item {
                 }
             }
             onPressed: {
+                iconoSerialport.z = 1
                 iconoSerialport.colorBackgraound = "#D95B43"
                 listaPuertos.visible = !listaPuertos.visible
                 listaPuertos.listaPuerto.clear()
@@ -163,7 +181,7 @@ Item {
                     listaPuertos.agregarPuerto(lista_puertos[p])
                 }
 
-                console.log(arduino.bautRates())
+
 //                console.log(arduino.getSerial_disponibles())
 //                var component;
 //                function finish() {

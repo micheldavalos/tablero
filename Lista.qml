@@ -2,7 +2,7 @@ import QtQuick 2.0
 Item {
     id: info
     height: vista.contentItem.childrenRect.height
-    width: vista.contentItem.childrenRect.width + 4
+    width: parent.width
     property alias listaPuerto: puertosModel
 
     signal agregarPuerto(string puerto)
@@ -35,6 +35,8 @@ Item {
                 color: "#ECD078"
 //                horizontalAlignment: Text.AlignLeft
                 x: 4
+                clip: true
+                width: parent.width - 4
                 text: namePort
 
                 MouseArea {
@@ -42,9 +44,20 @@ Item {
 
                     onClicked: {
                         console.log(namePort)
-                        arduino.name = namePort
 
-                        listaPuertos.visible = false
+                        if(listaBautRates.visible == true)
+                        {
+                            listaBautRates.visible = false
+                            arduino.baud = namePort
+
+                        }
+                        else if(listaPuertos.visible == true)
+                        {
+                            listaPuertos.visible = false
+                            arduino.name = namePort
+
+                        }
+
 
                     }
 
