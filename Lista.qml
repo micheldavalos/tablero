@@ -6,7 +6,7 @@ Item {
 
     signal agregarPuerto(string puerto)
     function agregar(palabra){
-        console.log(palabra)
+//        console.log(palabra)
         puertosModel.append({"namePort": palabra})
 
     }
@@ -41,6 +41,7 @@ Item {
 
                     onClicked: {
                         console.log(namePort)
+                        arduino.name = namePort
 
                     }
 
@@ -52,8 +53,8 @@ Item {
 
        Component.onCompleted: {
            info.agregarPuerto.connect(agregar)
-           console.log(puertosModel.get(0).namePort)
-//           puertosModel.clear()
+//           console.log(puertosModel.get(0).namePort)
+           puertosModel.clear()
 
        }
 }

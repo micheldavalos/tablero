@@ -4,7 +4,10 @@ import Arduino 1.0
 Item {
     id: terminal
 
-    Arduino{ id: arduino }
+    Arduino{
+        id: arduino
+        property string name: ""
+    }
     Rectangle {
         color: "#542437"
         border.color: "#53777A"

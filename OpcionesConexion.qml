@@ -155,7 +155,12 @@ Item {
             onPressed: {
                 iconoSerialport.colorBackgraound = "#D95B43"
                 listaPuertos.visible = !listaPuertos.visible
-                listaPuertos.agregarPuerto("hola")
+
+                var lista_puertos = arduino.getSerial_disponibles()
+                for(var p in lista_puertos) {
+//                    console.log(lista_puertos[p])
+                    listaPuertos.agregarPuerto(lista_puertos[p])
+                }
 
 //                console.log(arduino.getSerial_disponibles())
 //                var component;
