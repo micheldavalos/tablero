@@ -3,6 +3,7 @@ Item {
     id: info
     height: vista.contentItem.childrenRect.height
     width: 72
+    property alias listaPuerto: puertosModel
 
     signal agregarPuerto(string puerto)
     function agregar(palabra){
