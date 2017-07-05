@@ -32,6 +32,7 @@ public:
 
     QHash<size_t, QSerialPortInfo> _getSerial_disponibles() const;
     Q_INVOKABLE QList<QString> getSerial_disponibles() const;
+    Q_INVOKABLE QList<int> bautRates() const;
     void setSerial_disponibles(const QHash<size_t, QSerialPortInfo> &value);
 
 signals:

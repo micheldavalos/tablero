@@ -163,6 +163,7 @@ Item {
                     listaPuertos.agregarPuerto(lista_puertos[p])
                 }
 
+                console.log(arduino.bautRates())
 //                console.log(arduino.getSerial_disponibles())
 //                var component;
 //                function finish() {

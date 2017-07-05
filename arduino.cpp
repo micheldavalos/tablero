@@ -109,6 +109,11 @@ QList<QString> Arduino::getSerial_disponibles() const
 
 }
 
+QList<qint32> Arduino::bautRates() const
+{
+    return QSerialPortInfo::standardBaudRates();
+}
+
 void Arduino::setSerial_disponibles(const QHash<size_t, QSerialPortInfo> &value)
 {
     serial_disponibles = value;
