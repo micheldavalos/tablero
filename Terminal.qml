@@ -23,13 +23,7 @@ Item {
 
         OpcionesConexion {
 
-            Text {
-                font.family: "Montserrat"
-                font.pixelSize: 10
-                color: "#ECD078"
-                x: 136; y: 44;
-                text: "BaudeRate"
-            }
+            z: 1
         }
 
         TerminalLineEdit {

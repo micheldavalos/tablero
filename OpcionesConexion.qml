@@ -131,6 +131,12 @@ Item {
             sourceSize.width: 14
         }
 
+        Lista {
+            id: listaPuertos
+            x: 10; y: -8;
+            visible: false
+        }
+
         MouseArea {
             anchors.fill: parent
             hoverEnabled: true
@@ -148,9 +154,46 @@ Item {
             }
             onPressed: {
                 iconoSerialport.colorBackgraound = "#D95B43"
-                console.log(arduino.getSerial_disponibles())
+                listaPuertos.visible = !listaPuertos.visible
+                listaPuertos.agregarPuerto("hola")
+
+//                console.log(arduino.getSerial_disponibles())
+//                var component;
+//                function finish() {
+//                    if (component.status == Component.Ready) {
+//                        console.log("listo")
+//                        var sprite = component.createObject(iconoSerialport, {"x": 10, "y": -8})
+//                        if(sprite == null)
+//                            console.log("nada")
+//                    }
+//                    else {
+//                        console.log("no listo")
+//                    }
+//                }
+
+////                var dynamicObject = Qt.createQmlObject(
+////                 'import QtQuick 2.0;Rectangle{id:sample;width:72; height:40;color:"#C02942";}',
+////                 terminal, 'firstObject')
+
+//                component = Qt.createComponent("Lista.qml");
+//                if( component.status == Component.Ready)
+//                    finish()
+//                else
+//                    component.statusChanged.connect(finish)
+
+
             }
 
         }
     }
+
+    Text {
+        font.family: "Montserrat"
+        font.pixelSize: 10
+        color: "#ECD078"
+        x: 136; y: 44; z: -1
+        text: "BaudeRate"
+    }
 }
+
+

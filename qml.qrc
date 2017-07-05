@@ -6,6 +6,7 @@
         <file>OpcionesConexion.qml</file>
         <file>TerminalLineEdit.qml</file>
         <file>TerminalTextArea.qml</file>
+        <file>Lista.qml</file>
     </qresource>
     <qresource prefix="/iconos">
         <file>iconos/usb_ok.svg</file>
