@@ -36,7 +36,11 @@ Item {
                 iconoConectado.colorBackgraound = "#D95B43"
 
                 if(arduino.name != "") {
-                    console.log(arduino.conectar(arduino.name, arduino.baud))
+                    if (arduino.conectar(arduino.name, arduino.baud)) {
+                        statusBar_velocidad.text = arduino.baud + " / "
+                        statusBar_puerto .text = arduino.name + " - "
+                        statusBar_estado.text = "Conectado  "
+                    }
                 }
 
             }
@@ -76,6 +80,9 @@ Item {
             }
             onPressed: {
                 iconoDesconectado.colorBackgraound = "#D95B43"
+                if( arduino.desconectar() ) {
+                    statusBar_estado.text = "No Conectado"
+                }
 
             }
 

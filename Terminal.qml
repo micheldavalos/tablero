@@ -8,8 +8,6 @@ Item {
         id: arduino
         property string name: ""
         property int baud: 9600
-
-
     }
     Rectangle {
         color: "#542437"
@@ -40,14 +38,42 @@ Item {
 
         }
 
-        Text {
-            font.family: "Monserrat"
-            font.pixelSize: 10
-            color: "#ECD078"
+        Row {
+            id: statusBar
             x: 10
             y: parent.height - 20
-            text: "Velocidad / Puerto - Estado"
+            Text {
+                id: statusBar_velocidad
+                font.family: "Monserrat"
+                font.pixelSize: 10
+                color: "#ECD078"
+
+                text: "Velocidad / "//"Puerto - Estado"
+            }
+            Text {
+                id: statusBar_puerto
+                font.family: "Monserrat"
+                font.pixelSize: 10
+                color: "#ECD078"
+//                x: 10
+//                y: parent.height - 20
+
+                text: "Puerto - "//"Estado"
+            }
+            Text {
+                id: statusBar_estado
+                font.family: "Monserrat"
+                font.pixelSize: 10
+                color: "#ECD078"
+//                x: 10
+//                y: parent.height - 20
+
+                text: "Estado"
+            }
+
+
         }
+
 
     }
 }

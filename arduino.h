@@ -23,7 +23,7 @@ private:
 public:
     explicit Arduino();
     bool conectar(size_t indice);
-    bool desconectar();
+    Q_INVOKABLE bool desconectar();
     void enviar(const QByteArray &bytes);
     void disponibles();
 
