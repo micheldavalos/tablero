@@ -32,50 +32,94 @@ Item {
                 x: -9
                 y: 25
 
-                Image {
-                    x: 46
-                    y: 46
-                    source: "qrc:/iconos/iconos/tornillo_central.svg"
-                    sourceSize.width: 24
-                    sourceSize.height: 24
 
-                    rotation: valor_rotacion
-                    transformOrigin: Item.Center
-                    antialiasing: true
-
-//                    transform: Rotation { origin.x: 0; origin.y: 0; angle: 45}
-                }
 
 
             }
             handle: Rectangle {
                 id: handleItem
-                x: control.background.x + width / 4
-                y: control.background.y  + control.background.height / 2 - height / 2
-                width: 29
+                x: background_color.width/2 + background_color.x
+                y: background_color.height/2 + background_color.y - height/2
+                width: background_color.width/2
                 height: 10
                 antialiasing: true
-                color: control.background.color
-                Image {
-                    source: "qrc:/iconos/iconos/agujeros_servo.svg"
-                    sourceSize.width: 29
-                    sourceSize.height: 10
-                    antialiasing: true
-//                    anchors.centerIn: parent
+                color: "red"
+
+                Rectangle {
+                    id: agujeros
+
+                    Image {
+
+                        source: "qrc:/iconos/iconos/agujeros_servo.svg"
+                        sourceSize.width: 29
+                        sourceSize.height: 10
+                        antialiasing: true
+                        //                    anchors.centerIn: parent
+                    }
                 }
 
                 transform: [
                     Translate {
 //                        y: -Math.min(control.background.width, control.background.height) * 0.4 + handleItem.height / 2
-//                        x: control.background.x + width / 4
-                        y: control.background.width * 0.1 + handleItem.height / 2
+                        x: -1*(background_color.width/2) //handleItem.width / 2
+//                        y: control.background.height * 0.1 + handleItem.height / 2
                     },
                     Rotation {
                         angle: valor_rotacion
-                        origin.x: handleItem.width / 2
-                        origin.y: handleItem.height / 2
+                        origin.x: background_color.width/2 -1*(background_color.width/2)  //handleItem.width / 2
+                        origin.y: handleItem.height/2
                     }
                 ]
+               /* Row {
+//                    x: control.background.width/2
+                    Rectangle {
+                        id: agujeros
+
+                        Image {
+
+                            source: "qrc:/iconos/iconos/agujeros_servo.svg"
+                            sourceSize.width: 29
+                            sourceSize.height: 10
+                            antialiasing: true
+                            //                    anchors.centerIn: parent
+                        }
+                    }
+                    Rectangle {
+                        id: tornillo
+
+//                        x: 30
+//                        y: -7
+                        Image {
+
+                            source: "qrc:/iconos/iconos/tornillo_central.svg"
+                            sourceSize.width: 24
+                            sourceSize.height: 24
+
+//                            rotation: valor_rotacion
+//                            transformOrigin: Item.Center
+                            antialiasing: true
+
+        //                    transform: Rotation { origin.x: 0; origin.y: 0; angle: 45}
+                        }
+
+                    }
+
+                }
+
+
+
+                transform: [
+                    Translate {
+//                        y: -Math.min(control.background.width, control.background.height) * 0.4 + handleItem.height / 2
+//                        x: -(background_color.width/2) //handleItem.width / 2
+//                        y: control.background.height * 0.1 + handleItem.height / 2
+                    },
+                    Rotation {
+                        angle: valor_rotacion
+                        origin.x: background_color.width/2 //handleItem.width / 2
+//                        origin.y: background_color.height/2
+                    }
+                ]*/
 
             }
 
