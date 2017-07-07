@@ -3,17 +3,25 @@ import QtQuick.Window 2.2
 
 Window {
     visible: true
-    width: 640
-    height: 480
-    title: qsTr("Hello World")
+    width: 884
+    height: 718
+    title: qsTr("ServoDriver 3")
 
-    Terminal {
+    Rectangle {
         anchors.fill: parent
+        color: "#ECD078"
+
+        Terminal {
+//            anchors.fill: parent
+            x: 524
+            y: 52
+        }
+        Calibracion {
+            x: 683
+            y: 476
+        }
     }
-    Calibracion {
-        x: 100
-        y: 100
-    }
+
 
 
 //    MainForm {
