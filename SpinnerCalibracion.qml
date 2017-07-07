@@ -3,15 +3,17 @@ import QtQuick.Controls 1.4
 import QtQuick.Controls.Styles 1.4
 
 Item {
+    property string imagen
+    property string sufijo
     Rectangle {
-        x: 30
-        y: 44
+//        x: 30
+//        y: 44
         width: 24
         height: 24
         radius: width*0.5
         color: "#C02942"
         Image {
-            source: "qrc:/iconos/iconos/pwm_min.svg"
+            source: imagen
             anchors.centerIn: parent
             sourceSize.height: 18
             sourceSize.width: 18
@@ -19,23 +21,25 @@ Item {
     }
 
     SpinBox {
-        x: 56
-        y: 44
+        id: spin
+        x: parent.x
+//        y: parent.y
 
-        suffix: " µs"
+        suffix: sufijo
         font.family: "Monserrat"
         font.pixelSize: 12
         width: 64
         height: 24
         horizontalAlignment: Qt.AlignRight
 
-
         style: SpinBoxStyle {
             background: Rectangle {
                         implicitWidth: 64
                         implicitHeight: 24
-                        color: "#542437"
+                        color: spin.hovered ? "#C02942" : "#542437"
                         radius: 2
+
+
                     }
             textColor: {
                 color: "#53777A"
@@ -67,7 +71,6 @@ Item {
 
             }
             incrementControl:  Rectangle {
-                id: incremental
                 implicitWidth: 10
                 implicitHeight: 10
                 radius: 2

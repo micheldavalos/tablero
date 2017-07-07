@@ -36,7 +36,40 @@ Item {
         }
 
         SpinnerCalibracion {
+            x: 30
+            y: 40
+            sufijo: " µs"
+            imagen: "qrc:/iconos/iconos/pwm_min.svg"
+        }
 
+        SpinnerCalibracion {
+            x: 30
+            y: 70
+            sufijo: " µs"
+            imagen: "qrc:/iconos/iconos/pwm_max.svg"
+        }
+
+        SpinnerCalibracion {
+            x: 30
+            y: 96
+            sufijo: " °"
+            imagen: "qrc:/iconos/iconos/angle_min.svg"
+        }
+
+        SpinnerCalibracion {
+            x: 30
+            y: 96 + 30
+            sufijo: " °"
+            imagen: "qrc:/iconos/iconos/angle_max.svg"
+        }
+
+        Text {
+            x: 10
+            y: 170
+            font.family: "Monserrat"
+            font.pixelSize: 10
+            color: "#ECD078"
+            text: "PWM mínimo"
         }
     }
 }
