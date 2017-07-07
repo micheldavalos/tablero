@@ -4,6 +4,7 @@ import QtQuick.Controls 2.2
 Item {
     property string id_servo
     property real valor_rotacion: 0
+
     Rectangle {
         width: 98
         height: 260
@@ -21,6 +22,7 @@ Item {
             from: 0
             to: 360
             stepSize: 1
+            snapMode: Dial.SnapAlways
 //            rotation: valor_rotacion
 //            transformOrigin: Item.Center
             background: Rectangle {
@@ -99,15 +101,20 @@ Item {
             onMoved: {
                 console.log(position*360)
                 valor_rotacion = value
+                spinner_servo.valor_cambio = position*360
             }
         }
 
         SpinnerServo {
-
+            id: spinner_servo
             minimo: 0
             maximo: 360
 
-            onValuechange: console.log(valor)
+            onValuechange: {
+                console.log(valor)
+                valor_rotacion = valor
+            }
+
         }
 
         Text {
