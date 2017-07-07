@@ -1,7 +1,9 @@
 import QtQuick 2.0
+import QtQuick.Controls 2.2
 
 Item {
     property string id_servo
+    property real valor_rotacion: 0
     Rectangle {
         width: 98
         height: 260
@@ -12,6 +14,75 @@ Item {
 //            anchors.centerIn: parent
             sourceSize.height: parent.height
             sourceSize.width: parent.width
+        }
+
+        Dial {
+            id: control
+            from: 0
+            to: 360
+            stepSize: 1
+//            rotation: valor_rotacion
+//            transformOrigin: Item.Center
+            background: Rectangle {
+                id: background_color
+                color: "#ECD078"
+                width: 116
+                height: 116
+                radius: width / 2
+                x: -9
+                y: 25
+
+                Image {
+                    x: 46
+                    y: 46
+                    source: "qrc:/iconos/iconos/tornillo_central.svg"
+                    sourceSize.width: 24
+                    sourceSize.height: 24
+
+                    rotation: valor_rotacion
+                    transformOrigin: Item.Center
+                    antialiasing: true
+
+//                    transform: Rotation { origin.x: 0; origin.y: 0; angle: 45}
+                }
+
+
+            }
+            handle: Rectangle {
+                id: handleItem
+                x: control.background.x + width / 4
+                y: control.background.y  + control.background.height / 2 - height / 2
+                width: 29
+                height: 10
+                antialiasing: true
+                color: control.background.color
+                Image {
+                    source: "qrc:/iconos/iconos/agujeros_servo.svg"
+                    sourceSize.width: 29
+                    sourceSize.height: 10
+                    antialiasing: true
+//                    anchors.centerIn: parent
+                }
+
+                transform: [
+                    Translate {
+//                        y: -Math.min(control.background.width, control.background.height) * 0.4 + handleItem.height / 2
+//                        x: control.background.x + width / 4
+                        y: control.background.width * 0.1 + handleItem.height / 2
+                    },
+                    Rotation {
+                        angle: valor_rotacion
+                        origin.x: handleItem.width / 2
+                        origin.y: handleItem.height / 2
+                    }
+                ]
+
+            }
+
+            onMoved: {
+                console.log(position)
+                valor_rotacion = value
+            }
         }
 
         SpinnerServo {
