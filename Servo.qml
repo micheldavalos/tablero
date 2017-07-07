@@ -23,6 +23,7 @@ Item {
             to: 360
             stepSize: 1
             snapMode: Dial.SnapAlways
+
 //            rotation: valor_rotacion
 //            transformOrigin: Item.Center
             background: Rectangle {
