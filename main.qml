@@ -20,6 +20,37 @@ Window {
             x: 683
             y: 476
         }
+
+        Rectangle {
+            x: 524
+            y: 476
+            width: 149
+            height: 90
+            color: parent.color
+
+            Image {
+                source: "qrc:/iconos/iconos/id_top.svg"
+                anchors.centerIn: parent
+                sourceSize.height: parent.height
+                sourceSize.width: parent.width
+            }
+        }
+
+        Rectangle {
+            x: 524
+            y: 576
+            width: 149
+            height: 90
+            color: parent.color
+
+            Image {
+                source: "qrc:/iconos/iconos/id_bottom.svg"
+                anchors.centerIn: parent
+                sourceSize.height: parent.height
+                sourceSize.width: parent.width
+
+            }
+        }
     }
 
 

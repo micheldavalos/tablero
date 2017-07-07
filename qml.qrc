@@ -9,7 +9,7 @@
         <file>TerminalLineEdit.qml</file>
         <file>TerminalTextArea.qml</file>
         <file>Lista.qml</file>
-        </qresource>
+    </qresource>
     <qresource prefix="/iconos">
         <file>iconos/usb_ok.svg</file>
         <file>iconos/usb_no_ok.svg</file>
@@ -24,5 +24,10 @@
         <file>iconos/angle_min.svg</file>
         <file>iconos/pwm_max.svg</file>
         <file>iconos/pwm_min.svg</file>
+        <file>iconos/id_bottom.svg</file>
+        <file>iconos/id_top.svg</file>
+        <file>iconos/pistas_servos_1.svg</file>
+        <file>iconos/pistas_servos_2.svg</file>
+        <file>iconos/pistas_servos_3.svg</file>
     </qresource>
 </RCC>
