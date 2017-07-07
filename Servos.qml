@@ -16,6 +16,16 @@ Item {
         width: 462
         height: 614
 
+        Image {
+            x: 71
+            y: 6
+            source: "qrc:/iconos/iconos/pistas_servos_0.svg"
+
+            sourceSize.width:  367
+            sourceSize.height: 580
+//            anchors.centerIn: parent
+        }
+
         Servo {
 
             x: 24
@@ -63,5 +73,7 @@ Item {
 
             id_servo: "6"
         }
+
+
     }
 }
