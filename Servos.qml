@@ -25,6 +25,54 @@ Item {
             sourceSize.height: 580
 //            anchors.centerIn: parent
         }
+        Rectangle {
+            property color color_paste: "#53777A"
+            property real estado: 0
+            id: paste
+            x: 16
+            y: 580
+            width: 22
+            height: 22
+
+            color: color_paste
+            Image {
+                source: "qrc:/iconos/iconos/take_a_frame.svg"
+                sourceSize.width:  22
+                sourceSize.height: 22
+                anchors.centerIn: parent
+            }
+
+            MouseArea {
+                anchors.fill: parent
+                hoverEnabled: true
+
+                onHoveredChanged: {
+                    if(paste.estado == 0)
+                    {
+                        paste.color_paste = "#ECD078"
+                        paste.estado = 1
+                    }
+                    else{
+                        paste.color_paste = "#53777A"
+                        paste.estado = 0
+                    }
+                }
+                onPressed: {
+                    paste.color_paste = "#C02942"
+                    }
+
+            }
+        }
+
+        Text {
+            x: 45
+            y: 591
+            font.family: "Monserrat"
+            font.pixelSize: 10
+            color: "#542437"
+
+            text: "Copiar frame"
+        }
 
         Servo {
 
