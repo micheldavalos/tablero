@@ -31,5 +31,12 @@
         <file>iconos/pistas_servos_1.svg</file>
         <file>iconos/pistas_servos_2.svg</file>
         <file>iconos/pistas_servos_3.svg</file>
+        <file>iconos/agujeros_servo.svg</file>
+        <file>iconos/case_servo.svg</file>
+        <file>iconos/pistas_servos_0.svg</file>
+        <file>iconos/pointer_down_2.svg</file>
+        <file>iconos/pointer_up_2.svg</file>
+        <file>iconos/take_a_frame.svg</file>
+        <file>iconos/tornillo_central.svg</file>
     </qresource>
 </RCC>
