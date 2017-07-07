@@ -41,22 +41,46 @@ Item {
                 x: background_color.width/2 + background_color.x
                 y: background_color.height/2 + background_color.y - height/2
                 width: background_color.width/2
-                height: 10
+                height: 24
                 antialiasing: true
-                color: "red"
+                color: "#ECD078"
+                radius: 8
 
-                Rectangle {
-                    id: agujeros
+                Row {
+                    Rectangle {
+                        id: agujeros
+                        x: 10
+                        y: handleItem.height/2 - 5
+                        Image {
 
-                    Image {
+                            source: "qrc:/iconos/iconos/agujeros_servo.svg"
+                            sourceSize.width: 29
+                            sourceSize.height: 10
+                            antialiasing: true
+                            //                    anchors.centerIn: parent
+                        }
+                    }
+                    Rectangle {
+                        id: tornillo
 
-                        source: "qrc:/iconos/iconos/agujeros_servo.svg"
-                        sourceSize.width: 29
-                        sourceSize.height: 10
-                        antialiasing: true
-                        //                    anchors.centerIn: parent
+                        x: handleItem.width - 12
+//                        y:
+                        Image {
+
+                            source: "qrc:/iconos/iconos/tornillo_central.svg"
+                            sourceSize.width: 24
+                            sourceSize.height: 24
+
+    //                            rotation: valor_rotacion
+    //                            transformOrigin: Item.Center
+                            antialiasing: true
+
+        //                    transform: Rotation { origin.x: 0; origin.y: 0; angle: 45}
+                        }
+
                     }
                 }
+
 
                 transform: [
                     Translate {
