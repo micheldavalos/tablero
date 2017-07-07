@@ -21,6 +21,11 @@ Window {
             y: 476
         }
 
+        Servos {
+            x: 52
+            y: 52
+        }
+
         Rectangle {
             x: 524
             y: 476
