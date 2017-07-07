@@ -6,6 +6,8 @@ Item {
     id: raiz
     property string imagen
     property string sufijo
+    property real minimo
+    property real maximo
 
     signal valuechange(real valor)
     Rectangle {
@@ -35,9 +37,13 @@ Item {
         height: 24
         horizontalAlignment: Qt.AlignRight
 
+        minimumValue: raiz.minimo
+        maximumValue: raiz.maximo
+
         onValueChanged:   raiz.valuechange(spin.value)
 
         style: SpinBoxStyle {
+            selectionColor: "#C02942"
             background: Rectangle {
                         implicitWidth: 64
                         implicitHeight: 24

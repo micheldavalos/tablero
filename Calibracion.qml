@@ -41,6 +41,9 @@ Item {
             sufijo: " µs"
             imagen: "qrc:/iconos/iconos/pwm_min.svg"
 
+            minimo: 0
+            maximo: 3000
+
             onValuechange: console.log(valor)
         }
 
@@ -49,6 +52,9 @@ Item {
             y: 70
             sufijo: " µs"
             imagen: "qrc:/iconos/iconos/pwm_max.svg"
+
+            minimo: 0
+            maximo: 3000
 
             onValuechange: console.log(valor)
         }
@@ -59,6 +65,9 @@ Item {
             sufijo: " °"
             imagen: "qrc:/iconos/iconos/angle_min.svg"
 
+            minimo: 0
+            maximo: 360
+
             onValuechange: console.log(valor)
         }
 
@@ -67,6 +76,9 @@ Item {
             y: 96 + 30
             sufijo: " °"
             imagen: "qrc:/iconos/iconos/angle_max.svg"
+
+            minimo: 0
+            maximo: 360
 
             onValuechange: console.log(valor)
         }
