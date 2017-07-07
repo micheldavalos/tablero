@@ -40,6 +40,8 @@ Item {
             y: 40
             sufijo: " µs"
             imagen: "qrc:/iconos/iconos/pwm_min.svg"
+
+            onValuechange: console.log(valor)
         }
 
         SpinnerCalibracion {
@@ -47,6 +49,8 @@ Item {
             y: 70
             sufijo: " µs"
             imagen: "qrc:/iconos/iconos/pwm_max.svg"
+
+            onValuechange: console.log(valor)
         }
 
         SpinnerCalibracion {
@@ -54,6 +58,8 @@ Item {
             y: 96
             sufijo: " °"
             imagen: "qrc:/iconos/iconos/angle_min.svg"
+
+            onValuechange: console.log(valor)
         }
 
         SpinnerCalibracion {
@@ -61,6 +67,8 @@ Item {
             y: 96 + 30
             sufijo: " °"
             imagen: "qrc:/iconos/iconos/angle_max.svg"
+
+            onValuechange: console.log(valor)
         }
 
         Text {

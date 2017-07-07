@@ -3,8 +3,11 @@ import QtQuick.Controls 1.4
 import QtQuick.Controls.Styles 1.4
 
 Item {
+    id: raiz
     property string imagen
     property string sufijo
+
+    signal valuechange(real valor)
     Rectangle {
 //        x: 30
 //        y: 44
@@ -31,6 +34,8 @@ Item {
         width: 64
         height: 24
         horizontalAlignment: Qt.AlignRight
+
+        onValueChanged:   raiz.valuechange(spin.value)
 
         style: SpinBoxStyle {
             background: Rectangle {
