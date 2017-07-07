@@ -15,5 +15,13 @@ Item {
         border.width: 1
         width: 462
         height: 614
+
+        Servo {
+
+            x: 24
+            y: 23
+
+            id_servo: "1"
+        }
     }
 }

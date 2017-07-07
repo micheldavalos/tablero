@@ -11,6 +11,7 @@
         <file>Lista.qml</file>
         <file>Servos.qml</file>
         <file>Servo.qml</file>
+        <file>SpinnerServo.qml</file>
     </qresource>
     <qresource prefix="/iconos">
         <file>iconos/usb_ok.svg</file>
