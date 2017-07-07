@@ -94,61 +94,10 @@ Item {
                         origin.y: handleItem.height/2
                     }
                 ]
-               /* Row {
-//                    x: control.background.width/2
-                    Rectangle {
-                        id: agujeros
-
-                        Image {
-
-                            source: "qrc:/iconos/iconos/agujeros_servo.svg"
-                            sourceSize.width: 29
-                            sourceSize.height: 10
-                            antialiasing: true
-                            //                    anchors.centerIn: parent
-                        }
-                    }
-                    Rectangle {
-                        id: tornillo
-
-//                        x: 30
-//                        y: -7
-                        Image {
-
-                            source: "qrc:/iconos/iconos/tornillo_central.svg"
-                            sourceSize.width: 24
-                            sourceSize.height: 24
-
-//                            rotation: valor_rotacion
-//                            transformOrigin: Item.Center
-                            antialiasing: true
-
-        //                    transform: Rotation { origin.x: 0; origin.y: 0; angle: 45}
-                        }
-
-                    }
-
-                }
-
-
-
-                transform: [
-                    Translate {
-//                        y: -Math.min(control.background.width, control.background.height) * 0.4 + handleItem.height / 2
-//                        x: -(background_color.width/2) //handleItem.width / 2
-//                        y: control.background.height * 0.1 + handleItem.height / 2
-                    },
-                    Rotation {
-                        angle: valor_rotacion
-                        origin.x: background_color.width/2 //handleItem.width / 2
-//                        origin.y: background_color.height/2
-                    }
-                ]*/
-
             }
 
             onMoved: {
-                console.log(position)
+                console.log(position*360)
                 valor_rotacion = value
             }
         }
