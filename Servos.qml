@@ -23,5 +23,45 @@ Item {
 
             id_servo: "1"
         }
+
+        Servo {
+
+            x: 163
+            y: 23
+
+            id_servo: "2"
+        }
+        Servo {
+
+            x: 302
+            y: 23
+
+            id_servo: "3"
+        }
+        Servo {
+
+            x: 24
+            y: 307
+
+            id_servo: "4"
+        }
+
+
+        Servo {
+
+            x: 163
+            y: 307
+
+            id_servo: "5"
+        }
+
+
+        Servo {
+
+            x: 302
+            y: 307
+
+            id_servo: "6"
+        }
     }
 }
