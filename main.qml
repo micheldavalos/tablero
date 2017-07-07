@@ -10,6 +10,10 @@ Window {
     Terminal {
         anchors.fill: parent
     }
+    Calibracion {
+        x: 100
+        y: 100
+    }
 
 
 //    MainForm {

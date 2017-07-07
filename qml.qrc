@@ -3,8 +3,16 @@
         <file>main.qml</file>
         <file>MainForm.ui.qml</file>
         <file>Terminal.qml</file>
+        <file>Calibracion.qml</file>
+        <file>SpinnerCalibracion.qml</file>
     </qresource>
     <qresource prefix="/iconos">
         <file>iconos/usb_ok.svg</file>
+        <file>iconos/pointer_down_1.svg</file>
+        <file>iconos/pointer_up_1.svg</file>
+        <file>iconos/angle_max.svg</file>
+        <file>iconos/angle_min.svg</file>
+        <file>iconos/pwm_max.svg</file>
+        <file>iconos/pwm_min.svg</file>
     </qresource>
 </RCC>
