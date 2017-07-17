@@ -25,6 +25,7 @@ public:
     bool conectar(size_t indice);
     Q_INVOKABLE bool desconectar();
     void enviar(const QByteArray &bytes);
+    Q_INVOKABLE void enviar(const QString &str);
     void disponibles();
 
     qint32 getBaudRate() const;

@@ -37,6 +37,7 @@ Item {
 
                 if(arduino.name != "") {
                     if (arduino.conectar(arduino.name, arduino.baud)) {
+
                         statusBar_velocidad.text = arduino.baud + " / "
                         statusBar_puerto .text = arduino.name + " - "
                         statusBar_estado.text = "Conectado  "

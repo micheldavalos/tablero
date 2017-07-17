@@ -101,6 +101,9 @@ Item {
 
             onMoved: {
                 console.log(position*360)
+                var json_value = '{"id":' + id_servo + ', "pos": ' + Math.round(position*360) + '}'
+                console.log(json_value)
+                arduino.enviar(json_value)
                 valor_rotacion = value
                 spinner_servo.valor_cambio = position*360
             }
@@ -108,12 +111,14 @@ Item {
 
         SpinnerServo {
             id: spinner_servo
-            minimo: 0
-            maximo: 360
+            minimo: 204
+            maximo: 820
 
             onValuechange: {
                 console.log(valor)
                 valor_rotacion = valor
+                var json_value = '{"id":' + id_servo + ', "pos": ' + valor + '}'
+                arduino.enviar(json_value)
             }
 
         }

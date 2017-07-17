@@ -1,14 +1,10 @@
 import QtQuick 2.7
-import Arduino 1.0
+
 
 Item {
     id: terminal
 
-    Arduino{
-        id: arduino
-        property string name: ""
-        property int baud: 9600
-    }
+
     Rectangle {
         color: "#542437"
         border.color: "#53777A"

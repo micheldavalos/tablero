@@ -1,5 +1,6 @@
 import QtQuick 2.8
 import QtQuick.Window 2.2
+import Arduino 1.0
 
 Window {
     visible: true
@@ -10,6 +11,12 @@ Window {
     Rectangle {
         anchors.fill: parent
         color: "#ECD078"
+
+        Arduino{
+            id: arduino
+            property string name: ""
+            property int baud: 9600
+        }
 
         Terminal {
 //            anchors.fill: parent

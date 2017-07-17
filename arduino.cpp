@@ -179,3 +179,12 @@ void Arduino::enviar(const QByteArray &bytes)
     }
     else qDebug() << "Error, no está conectado";
 }
+
+void Arduino::enviar(const QString &str)
+{
+    if(serial != nullptr && serial->isOpen())
+    {
+        serial->write(str.toLatin1());
+    }
+    else qDebug() << "Error, no está conectado";
+}
